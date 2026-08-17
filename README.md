@@ -85,7 +85,7 @@ This repository currently serves as the public face of Cush Payments on GitHub. 
 
 - **Website / Beta Waitlist**: [cushpayments.co.uk](https://cushpayments.co.uk)
 - **Investor Data Room** (authorised access): available on request
-- **Company**: Cush Payments · Registered office 3 Templemead Close, London W3 7NH
+- **Company**: Cush Payments
 - **Contact**: mfolson@cushpayments.com
 
 ---
