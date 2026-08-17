@@ -23,10 +23,6 @@ Cush Payments delivers a premium remittance experience purpose-built for the Afr
 
 Alongside the consumer remittance product, **Cush Core** is a production-grade, AI-native core banking and payments platform designed for licensing to banks, PSPs, fintechs and governments across Africa. It combines an immutable distributed ledger, agentic AI orchestration, and regulatory-first design to deliver high-performance, low-opex infrastructure (~£1 / customer / month target).
 
-**Dual opportunity**
-- Consumer remittance corridors (UK/US/EU → Ghana, Nigeria, Kenya and expanding)
-- Cush Core platform licensing ($3.5M seed at $25M pre-money for Core; larger raise for full Payments entity)
-
 ---
 
 ## Key Capabilities
