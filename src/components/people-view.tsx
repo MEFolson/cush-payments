@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "@tanstack/react-router";
-import { Plus } from "lucide-react";
+import { Plus, ShieldCheck } from "lucide-react";
 import { Flag } from "@/components/flag";
 import { PersonAvatar } from "@/components/person-avatar";
 import { Sheet } from "@/components/sheet";
@@ -48,7 +48,7 @@ export function PeopleView() {
 
   return (
     <div className="relative flex min-h-0 flex-1 flex-col overflow-y-auto">
-      <header className="flex items-end justify-between px-5 pt-5 pb-3">
+      <header className="flex items-end justify-between px-5 pt-2 pb-3">
         <div>
           <p className="label-kicker text-champagne">People</p>
           <h1 className="mt-1 font-display text-2xl font-bold tracking-tight">
@@ -84,7 +84,10 @@ export function PeopleView() {
             >
               <PersonAvatar name={p.name} size={48} />
               <div className="min-w-0 flex-1">
-                <p className="font-semibold">{p.name}</p>
+                <p className="flex items-center gap-1 font-semibold">
+                  {p.name}
+                  <ShieldCheck className="size-3.5 shrink-0 text-success" />
+                </p>
                 <p className="flex items-center gap-1.5 text-xs text-stone">
                   <Flag iso2={p.iso2} size={14} />
                   {p.relation} · {rail?.name}

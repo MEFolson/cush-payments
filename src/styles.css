@@ -47,10 +47,13 @@
   --shadow-border-hover: 0 0 0 1px #17141124, 0 2px 6px #1714110f;
   --shadow-lift: 0 0 0 1px #17141114, 0 24px 48px -28px #17141147;
   --shadow-cta: 0 0 0 1px #e85d0473, 0 16px 28px -16px #e85d04b3;
+  --shadow-bezel: 0 0 0 1px #ffffff14, 0 40px 80px -32px #00000099;
 
-  --max-width-phone: 430px;
+  --max-width-phone: 390px;
 
   --ease-out-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+  --motion-quick: 150ms;
+  --motion-fast: 250ms;
 }
 
 @layer base {
@@ -62,7 +65,7 @@
   html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background: var(--color-paper);
+    background: var(--color-ink);
     color: var(--color-ink);
   }
 
@@ -101,7 +104,7 @@
 
 @layer utilities {
   .tap-press {
-    transition: scale 150ms ease-out;
+    transition: scale var(--motion-quick) ease-out;
   }
   .tap-press:active:not(:disabled) {
     scale: 0.96;
@@ -119,6 +122,9 @@
   .shadow-cta {
     box-shadow: var(--shadow-cta);
   }
+  .shadow-bezel {
+    box-shadow: var(--shadow-bezel);
+  }
 
   .tabular {
     font-variant-numeric: tabular-nums;
@@ -130,6 +136,29 @@
     letter-spacing: 0.16em;
     text-transform: uppercase;
   }
+
+  .safe-top {
+    padding-top: var(--safe-top);
+  }
+  .safe-bottom {
+    padding-bottom: var(--safe-bottom);
+  }
+}
+
+[data-platform="ios"] {
+  --safe-top: 54px;
+  --safe-bottom: 8px;
+  --radius-ctl: 12px;
+  --radius-card: 20px;
+  --nav-h: 84px;
+}
+
+[data-platform="android"] {
+  --safe-top: 36px;
+  --safe-bottom: 12px;
+  --radius-ctl: 16px;
+  --radius-card: 20px;
+  --nav-h: 80px;
 }
 
 @media (prefers-reduced-motion: reduce) {

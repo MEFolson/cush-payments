@@ -18,7 +18,7 @@ export const Route = createRootRoute({
       {
         name: "description",
         content:
-          "Send money to Africa. 1.8% fee. You see what they get before you send. Live in every African country.",
+          "Native iOS and Android remittance. KYC, rate lock, SCA. 1.8% fee. You see what they get.",
       },
       { name: "apple-mobile-web-app-capable", content: "yes" },
       { name: "apple-mobile-web-app-title", content: "Cush" },

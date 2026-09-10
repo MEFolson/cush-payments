@@ -2,6 +2,7 @@ import { useState, type FormEvent } from "react";
 import { useNavigate } from "@tanstack/react-router";
 import { ArrowUp } from "lucide-react";
 import { parseSendIntent } from "@/lib/ai";
+import { RATE_LOCK_MS } from "@/lib/compliance";
 import { COUNTRY_BY_ISO } from "@/lib/countries";
 import { useCush } from "@/lib/store";
 import { cn } from "@/lib/utils";
@@ -67,6 +68,7 @@ export function AskCush({ compact }: { compact?: boolean }) {
         purpose: intent.purpose ?? person?.usualPurpose ?? "Family",
         step: person && amount ? "review" : "compose",
         receiptId: null,
+        rateLockUntil: person && amount ? Date.now() + RATE_LOCK_MS : null,
       });
       setHint(intent.summary);
       setText("");

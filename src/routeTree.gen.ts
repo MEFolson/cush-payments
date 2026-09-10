@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as AppRouteImport } from './routes/_app'
 import { Route as AppIndexRouteImport } from './routes/_app/index'
+import { Route as AppActivityRouteImport } from './routes/_app/activity'
 import { Route as AppPeopleRouteImport } from './routes/_app/people'
 import { Route as AppPulseRouteImport } from './routes/_app/pulse'
 import { Route as AppSendRouteImport } from './routes/_app/send'
@@ -23,6 +24,11 @@ const AppRoute = AppRouteImport.update({
 const AppIndexRoute = AppIndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppActivityRoute = AppActivityRouteImport.update({
+  id: '/activity',
+  path: '/activity',
   getParentRoute: () => AppRoute,
 } as any)
 const AppPeopleRoute = AppPeopleRouteImport.update({
@@ -48,12 +54,14 @@ const AppYouRoute = AppYouRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof AppIndexRoute
+  '/activity': typeof AppActivityRoute
   '/people': typeof AppPeopleRoute
   '/pulse': typeof AppPulseRoute
   '/send': typeof AppSendRoute
   '/you': typeof AppYouRoute
 }
 export interface FileRoutesByTo {
+  '/activity': typeof AppActivityRoute
   '/people': typeof AppPeopleRoute
   '/pulse': typeof AppPulseRoute
   '/send': typeof AppSendRoute
@@ -63,6 +71,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/_app': typeof AppRouteWithChildren
+  '/_app/activity': typeof AppActivityRoute
   '/_app/people': typeof AppPeopleRoute
   '/_app/pulse': typeof AppPulseRoute
   '/_app/send': typeof AppSendRoute
@@ -71,12 +80,13 @@ export interface FileRoutesById {
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/people' | '/pulse' | '/send' | '/you'
+  fullPaths: '/' | '/activity' | '/people' | '/pulse' | '/send' | '/you'
   fileRoutesByTo: FileRoutesByTo
-  to: '/people' | '/pulse' | '/send' | '/you' | '/'
+  to: '/activity' | '/people' | '/pulse' | '/send' | '/you' | '/'
   id:
     | '__root__'
     | '/_app'
+    | '/_app/activity'
     | '/_app/people'
     | '/_app/pulse'
     | '/_app/send'
@@ -102,6 +112,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof AppIndexRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/activity': {
+      id: '/_app/activity'
+      path: '/activity'
+      fullPath: '/activity'
+      preLoaderRoute: typeof AppActivityRouteImport
       parentRoute: typeof AppRoute
     }
     '/_app/people': {
@@ -136,6 +153,7 @@ declare module '@tanstack/react-router' {
 }
 
 interface AppRouteChildren {
+  AppActivityRoute: typeof AppActivityRoute
   AppPeopleRoute: typeof AppPeopleRoute
   AppPulseRoute: typeof AppPulseRoute
   AppSendRoute: typeof AppSendRoute
@@ -144,6 +162,7 @@ interface AppRouteChildren {
 }
 
 const AppRouteChildren: AppRouteChildren = {
+  AppActivityRoute: AppActivityRoute,
   AppPeopleRoute: AppPeopleRoute,
   AppPulseRoute: AppPulseRoute,
   AppSendRoute: AppSendRoute,

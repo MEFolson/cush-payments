@@ -19,29 +19,34 @@
 
 ## Overview
 
-Cush Payments delivers a premium remittance experience purpose-built for the African diaspora. Send money to mobile wallets and bank accounts across 20+ African countries in seconds, with fully transparent pricing (1.8% standard fee) and regulated settlement.
+Cush Payments delivers a premium remittance experience purpose-built for the African diaspora. Send money to mobile wallets and bank accounts across Africa in seconds, with fully transparent pricing (1.8% standard fee) and regulated settlement.
 
-Alongside the consumer remittance product, **Cush Core** is a production-grade, AI-native core banking and payments platform designed for licensing to banks, PSPs, fintechs and governments across Africa. It combines an immutable distributed ledger, agentic AI orchestration, and regulatory-first design to deliver high-performance, low-opex infrastructure (~£1 / customer / month target).
-
-This repository contains the **consumer remittance app** — the product experience for sending money home. Cush Core platform source remains private during the current funding and licensing phase.
+This repository contains the **consumer remittance app** — a native iPhone and Android experience (Human Interface Guidelines + Material 3) you can install to the home screen today. Cush Core platform source remains private during the current funding and licensing phase.
 
 ---
 
 ## Consumer app
 
-A mobile-first send experience:
+One product, two native shells. Switch **iPhone** / **Pixel** in the preview.
 
-- **Send** — quote both ways (they receive / you send), 1.8% fee, recipient amount shown before you confirm
-- **People** — save family across Africa (MTN MoMo, M-Pesa, Orange Money, Airtel Money, bank)
-- **Pulse** — corridor rates, usual-send predictions, and purpose totals
-- **Ask Cush** — natural-language send (“£200 to mum in Accra for rent”)
-- **You** — send currency (GBP / USD / EUR), corridors, demo reset
+| Practice | In the app |
+|----------|------------|
+| **KYC before first send** | Legal name, date of birth, residency, occupation, source of funds |
+| **App lock** | Face ID (iPhone), fingerprint (Pixel), or 4-digit passcode |
+| **They receive first** | Type cedis, naira, shillings — Cush reverse-quotes what you pay |
+| **Rate lock** | Mid-market FX held for 30 seconds on review |
+| **Name enquiry** | Wallet / bank name check before you confirm |
+| **SCA** | Biometric or passcode on every send (PSD2-style step-up) |
+| **Limits** | Daily / monthly / single-send caps with remaining balance |
+| **Activity** | Rail timeline: Faster Payments → Cush → PAPSS → MoMo / bank |
+| **Pulse** | Corridor trends and a plain-English send-now / wait read |
+| **Ask Cush** | Natural language: “send 2,000 cedis to Ama for rent” |
 
-Quotes and FX are illustrative. Transfers persist locally in the browser for the demo.
+Quotes and FX are illustrative. Transfers persist locally in the browser for the demo. Native App Store / Play binaries ship later with live rails and store review.
 
 ### Stack
 
-React 19 · TanStack Start / Router / Query · Tailwind v4 · Zustand · Zod
+React 19 · TanStack Start / Router · Tailwind v4 · Zustand · Zod · Recharts
 
 ### Run locally
 
@@ -64,6 +69,8 @@ npm test            # unit tests
 
 Ask Cush uses xAI when `XAI_API_KEY` is set in the environment. Without it, the rest of the app still runs.
 
+Demo passcode: `2580`.
+
 ---
 
 ## Key capabilities
@@ -75,7 +82,7 @@ Ask Cush uses xAI when `XAI_API_KEY` is set in the environment. Without it, the 
 | **Agentic AI** | Intelligent routing, fraud detection, compliance orchestration and customer experience |
 | **Immutable Ledger** | BLAKE3-based cryptographic ledger for auditability and regulatory confidence |
 | **Compliance-first** | Designed for KYC/AML, transaction monitoring, PSD2/DORA-aligned controls and Bank of Ghana / multi-jurisdiction licensing |
-| **Africa-first Coverage** | Priority corridors: UK→Ghana, US→Nigeria, expanding to 20+ markets |
+| **Africa-first Coverage** | Live payouts across all 54 African countries |
 | **Low Operating Cost** | Platform engineered for ~$1 per customer per month opex at scale |
 
 ---

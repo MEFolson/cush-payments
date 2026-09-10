@@ -1,4 +1,6 @@
 import { useMemo, useState, useEffect, useRef } from "react";
+import { useNavigate } from "@tanstack/react-router";
+import { ChevronLeft } from "lucide-react";
 import {
   CartesianGrid,
   Line,
@@ -19,6 +21,7 @@ import { useCush } from "@/lib/store";
 import { cn } from "@/lib/utils";
 
 export function PulseView() {
+  const navigate = useNavigate();
   const profile = useCush((s) => s.profile);
   const people = useCush((s) => s.people);
   const transfers = useCush((s) => s.transfers);
@@ -103,7 +106,15 @@ export function PulseView() {
 
   return (
     <div ref={scroller} className="flex min-h-0 flex-1 flex-col overflow-y-auto">
-      <header className="px-5 pt-5 pb-2">
+      <header className="px-5 pt-2 pb-2">
+        <button
+          type="button"
+          onClick={() => void navigate({ to: "/" })}
+          className="-ml-2 mb-1 flex size-11 items-center justify-center rounded-full tap-press"
+          aria-label="Back"
+        >
+          <ChevronLeft className="size-6" />
+        </button>
         <p className="label-kicker text-champagne">Pulse</p>
         <h1 className="mt-1 font-display text-2xl font-bold tracking-tight">
           When to send

@@ -94,5 +94,5 @@
     "typescript-eslint": "^8.56.1",
     "vite": "^8.2.0"
   },
-  "description": "Cush Payments \u2014 send money to Africa. Transparent 1.8% fee. You see what they get before you send."
+  "description": "Cush Payments \u2014 native iOS and Android remittance. KYC, rate lock, SCA. 1.8% fee."
 }
