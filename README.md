@@ -23,9 +23,50 @@ Cush Payments delivers a premium remittance experience purpose-built for the Afr
 
 Alongside the consumer remittance product, **Cush Core** is a production-grade, AI-native core banking and payments platform designed for licensing to banks, PSPs, fintechs and governments across Africa. It combines an immutable distributed ledger, agentic AI orchestration, and regulatory-first design to deliver high-performance, low-opex infrastructure (~£1 / customer / month target).
 
+This repository contains the **consumer remittance app** — the product experience for sending money home. Cush Core platform source remains private during the current funding and licensing phase.
+
 ---
 
-## Key Capabilities
+## Consumer app
+
+A mobile-first send experience:
+
+- **Send** — quote both ways (they receive / you send), 1.8% fee, recipient amount shown before you confirm
+- **People** — save family across Africa (MTN MoMo, M-Pesa, Orange Money, Airtel Money, bank)
+- **Pulse** — corridor rates, usual-send predictions, and purpose totals
+- **Ask Cush** — natural-language send (“£200 to mum in Accra for rent”)
+- **You** — send currency (GBP / USD / EUR), corridors, demo reset
+
+Quotes and FX are illustrative. Transfers persist locally in the browser for the demo.
+
+### Stack
+
+React 19 · TanStack Start / Router / Query · Tailwind v4 · Zustand · Zod
+
+### Run locally
+
+Requires **Node.js 22**.
+
+```bash
+git clone https://github.com/MEFolson/cush-payments.git
+cd cush-payments
+npm install
+npm run dev
+```
+
+Then open [http://localhost:8080](http://localhost:8080).
+
+```bash
+npm run build       # production build
+npm run typecheck   # TypeScript
+npm test            # unit tests
+```
+
+Ask Cush uses xAI when `XAI_API_KEY` is set in the environment. Without it, the rest of the app still runs.
+
+---
+
+## Key capabilities
 
 | Capability | Description |
 |------------|-------------|
@@ -39,7 +80,7 @@ Alongside the consumer remittance product, **Cush Core** is a production-grade, 
 
 ---
 
-## Architecture Highlights (Cush Core)
+## Architecture highlights (Cush Core)
 
 - **Immutable Ledger Layer** – Cryptographically verifiable transaction history using BLAKE3
 - **Agentic AI Orchestration** – Autonomous agents for payment routing, risk scoring, reconciliation and customer support
@@ -64,11 +105,8 @@ Combined team experience exceeds 75 years in regulated payments and core systems
 
 ---
 
-## Repository Status
+## Planned public assets
 
-This repository currently serves as the public face of Cush Payments on GitHub. Core platform source remains private during the current funding and licensing phase. Selected open-source components, SDKs, documentation and reference implementations will be published here as the platform matures and licensing agreements progress.
-
-### Planned Public Assets
 - API reference documentation
 - Client SDKs (selected languages)
 - Architecture decision records (ADRs)
@@ -86,7 +124,13 @@ This repository currently serves as the public face of Cush Payments on GitHub. 
 
 ---
 
-## Security & Responsible Disclosure
+## License
+
+This project is licensed under the [GNU Affero General Public License v3.0](LICENSE).
+
+---
+
+## Security & responsible disclosure
 
 Security is foundational. Please report any suspected vulnerabilities privately to the founders. Public disclosure of zero-days is not requested or expected.
 
