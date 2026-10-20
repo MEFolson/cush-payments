@@ -5,7 +5,7 @@
 <h1 align="center">Cush Payments</h1>
 
 <p align="center">
-  <strong>AI-native regulated African payments & core banking platform</strong><br>
+  <strong>AI-native African payments & core banking platform</strong><br>
   Instant, transparent remittances for the African diaspora · Cush Core platform licensing
 </p>
 
@@ -19,7 +19,7 @@
 
 ## Overview
 
-Cush Payments delivers a premium remittance experience purpose-built for the African diaspora. Send money to mobile wallets and bank accounts across Africa in seconds, with fully transparent pricing (1.8% standard fee) and regulated settlement.
+Cush Payments delivers a premium remittance experience purpose-built for the African diaspora. Send money to mobile wallets and bank accounts across Africa in seconds, with fully transparent pricing (1.8% standard fee).
 
 This repository contains the **consumer remittance app** — a native iPhone and Android experience (Human Interface Guidelines + Material 3) you can install to the home screen today. Cush Core platform source remains private during the current funding and licensing phase.
 
@@ -144,6 +144,6 @@ Security is foundational. Please report any suspected vulnerabilities privately 
 ---
 
 <p align="center">
-  <em>Built for the African diaspora. Engineered for regulated scale.</em><br>
+  <em>Built for the African diaspora. Engineered for scale.</em><br>
   © 2025–2026 Cush Payments. All rights reserved.
 </p>
