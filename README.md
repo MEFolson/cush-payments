@@ -5,7 +5,7 @@
 <h1 align="center">Cush Payments</h1>
 
 <p align="center">
-  <strong>AI-native African payments & core banking platform</strong><br>
+  <strong>AI-native African payments &amp; remittances</strong><br>
   Instant, transparent remittances for the African diaspora · Cush Core platform licensing
 </p>
 
