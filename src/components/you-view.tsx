@@ -10,14 +10,14 @@ import { useCush } from "@/lib/store";
 import { cn } from "@/lib/utils";
 
 const LICENCES = [
-  { place: "United Kingdom", body: "FCA authorised payment institution" },
-  { place: "Ghana", body: "Bank of Ghana Payment Service Provider" },
-  { place: "Nigeria", body: "CBN International Money Transfer" },
-  { place: "Kenya", body: "CBK money remittance operator" },
-  { place: "South Africa", body: "SARB ADLA" },
-  { place: "West Africa", body: "BCEAO EMI / SFD corridors" },
-  { place: "Central Africa", body: "BEAC regional payout" },
-  { place: "Continent", body: "PAPSS participant · local-currency settlement" },
+  { place: "United Kingdom", body: "Target corridor (FCA regime preparation, not yet authorised)" },
+  { place: "Ghana", body: "Target corridor (Bank of Ghana regime preparation, not yet licensed)" },
+  { place: "Nigeria", body: "Target corridor (CBN IMTO pathway, planned)" },
+  { place: "Kenya", body: "Target corridor (CBK remittance pathway, planned)" },
+  { place: "South Africa", body: "Target corridor (SARB ADLA partner pathway, planned)" },
+  { place: "West Africa", body: "Target corridor (BCEAO EMI and SFD partner rails, planned)" },
+  { place: "Central Africa", body: "Target corridor (BEAC regional payout rails, planned)" },
+  { place: "Continent", body: "Target integration (PAPSS local currency settlement design)" },
 ];
 
 export function YouView() {
@@ -158,7 +158,7 @@ export function YouView() {
       </section>
 
       <section className="mt-5">
-        <h2 className="font-display text-base font-semibold">Licensed, live, Africa-wide</h2>
+        <h2 className="font-display text-base font-semibold">Target corridors and regulatory preparation (pre launch)</h2>
         <ul className="mt-3 divide-y divide-line overflow-hidden rounded-xl bg-surface shadow-border">
           {LICENCES.map((l) => (
             <li key={l.place} className="px-4 py-3">
@@ -179,7 +179,7 @@ export function YouView() {
       </div>
       <p className="mt-4 text-xs text-ash">
         Cush Payments. Add to iPhone or Android from the browser share menu.
-        Native store binaries ship with live rails and Apple/Google review.
+        Pre launch demo preview (not yet live, regulated, or licensed). Closed beta planned for Jan to Mar 2027; production launch planned for Q2 2027.
       </p>
     </div>
   );

@@ -70,20 +70,19 @@ export function Onboarding() {
 
         {step === 0 && (
           <div className="mt-8">
-            <p className="label-kicker text-champagne">Licensed · Africa-wide</p>
+            <p className="label-kicker text-champagne">Pre launch · Pan African preview</p>
             <h1 className="mt-4 font-display text-[2.05rem] leading-[1.1] font-bold tracking-tight">
               Send money home the way a bank would ship it.
             </h1>
             <p className="mt-4 max-w-sm text-[15px] leading-relaxed text-bone/70">
               Identity first. Rate locked. Strong customer authentication on
-              every send. 1.8% fee, no FX markup, live in all 54 African
-              countries.
+              every send. 1.8% fee, no FX markup, designed for diaspora corridors across Africa.
             </p>
             <ul className="mt-8 space-y-4">
               {[
-                ["KYC before the first send", "Name, date of birth, occupation — the same pack a PSP files."],
+                ["KYC before the first send", "Name, date of birth, occupation, the same pack a PSP files."],
                 ["They receive first", "Type cedis, naira, shillings. We reverse-quote what you pay."],
-                ["SCA on confirm", "Face ID, fingerprint or passcode. PSD2-style step-up."],
+                ["SCA on confirm", "Face ID, fingerprint or passcode. PSD2 style step up."],
               ].map(([t, d]) => (
                 <li key={t} className="flex gap-3">
                   <ShieldCheck className="mt-0.5 size-5 shrink-0 text-champagne" />

@@ -69,7 +69,7 @@ export const parseSendIntent = createServerFn({ method: "POST" })
   .validator((input: unknown) => ParseInput.parse(input))
   .handler(async ({ data }): Promise<{ ok: true; intent: ParsedIntent } | { ok: false; error: string }> => {
     const result = await chatJson(
-      `You parse remittance intents for Cush Payments, a licensed African money app.
+      `You parse remittance intents for Cush Payments, an AI native African payments and remittances app preview.
 Return JSON only with keys:
 personId (string|null — must be one of the provided ids if you can match),
 personHint (string|null),
