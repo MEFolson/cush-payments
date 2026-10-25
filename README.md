@@ -5,48 +5,46 @@
 <h1 align="center">Cush Payments</h1>
 
 <p align="center">
-  <strong>AI-native regulated African payments & core banking platform</strong><br>
-  Instant, transparent remittances for the African diaspora · Cush Core platform licensing
+  <strong>AI native African payments and remittances platform</strong><br>
+  Set to become the de facto Africa payments platform, moving money from the African diaspora to Africa, running on Cush Core
 </p>
 
 <p align="center">
-  <a href="https://cushpayments.co.uk"><img src="https://img.shields.io/badge/Website-cushpayments.co.uk-black?style=for-the-badge" alt="Website"></a>
-  <a href="https://cushpayments.co.uk"><img src="https://img.shields.io/badge/Status-Beta-orange?style=for-the-badge" alt="Status"></a>
+  <a href="https://cushpayments.com"><img src="https://img.shields.io/badge/Website-cushpayments.com-black?style=for-the-badge" alt="Website"></a>
+  <a href="https://cush-core.com"><img src="https://img.shields.io/badge/Core-cush--core.com-black?style=for-the-badge" alt="Cush Core"></a>
   <a href="https://www.linkedin.com/in/matthew-folson-8632b51"><img src="https://img.shields.io/badge/Founder-Matthew%20Ekow%20Folson-0A66C2?style=for-the-badge&logo=linkedin" alt="Founder"></a>
 </p>
 
----
-
 ## Overview
 
-Cush Payments delivers a premium remittance experience purpose-built for the African diaspora. Send money to mobile wallets and bank accounts across Africa in seconds, with fully transparent pricing (1.8% standard fee) and regulated settlement.
+Cush Payments is set to become the de facto Africa payments platform, moving money from the African diaspora, wherever they live, to families and businesses across Africa. Send money to mobile wallets and bank accounts with transparent pricing (1.8% standard fee) where you see what the recipient gets before you send.
 
-This repository contains the **consumer remittance app** — a native iPhone and Android experience (Human Interface Guidelines + Material 3) you can install to the home screen today. Cush Core platform source remains private during the current funding and licensing phase.
+Cush Payments is pre launch, with closed beta planned for January to March 2027 and production launch planned for Q2 2027. Cush Payments is not yet live, regulated, or licensed; regulatory preparation is a design claim rather than a licence already granted.
 
----
+This repository contains the consumer remittance application preview (iPhone and Android web experience). Cush Core (`cush-core.com`), our AI native, licensable core banking platform for global banks, Tier 1 banks, and central banks, remains in a separate repository.
 
-## Consumer app
+## Consumer app preview
 
-One product, two native shells. Switch **iPhone** / **Pixel** in the preview.
+One product, two native shells. Switch **iPhone** or **Pixel** in the preview.
 
 | Practice | In the app |
 |----------|------------|
 | **KYC before first send** | Legal name, date of birth, residency, occupation, source of funds |
-| **App lock** | Face ID (iPhone), fingerprint (Pixel), or 4-digit passcode |
-| **They receive first** | Type cedis, naira, shillings — Cush reverse-quotes what you pay |
-| **Rate lock** | Mid-market FX held for 30 seconds on review |
-| **Name enquiry** | Wallet / bank name check before you confirm |
-| **SCA** | Biometric or passcode on every send (PSD2-style step-up) |
-| **Limits** | Daily / monthly / single-send caps with remaining balance |
-| **Activity** | Rail timeline: Faster Payments → Cush → PAPSS → MoMo / bank |
-| **Pulse** | Corridor trends and a plain-English send-now / wait read |
-| **Ask Cush** | Natural language: “send 2,000 cedis to Ama for rent” |
+| **App lock** | Face ID (iPhone), fingerprint (Pixel), or 4 digit passcode |
+| **They receive first** | Type cedis, naira, shillings and Cush quotes what you pay |
+| **Rate lock** | Mid market FX held for 30 seconds on review |
+| **Name enquiry** | Wallet or bank name check before you confirm |
+| **SCA** | Biometric or passcode on every send (PSD2 style step up) |
+| **Limits** | Daily, monthly, and single send caps with remaining balance |
+| **Activity** | Rail timeline across Faster Payments, Cush, PAPSS, and mobile money or bank |
+| **Pulse** | Corridor trends and a plain English send now or wait read |
+| **Ask Cush** | Natural language prompt such as "send 2,000 cedis to Ama for rent" |
 
-Quotes and FX are illustrative. Transfers persist locally in the browser for the demo. Native App Store / Play binaries ship later with live rails and store review.
+Quotes and FX are illustrative. Transfers persist locally in the browser for the demo.
 
 ### Stack
 
-React 19 · TanStack Start / Router · Tailwind v4 · Zustand · Zod · Recharts
+React 19, TanStack Start and Router, Tailwind v4, Zustand, Zod, Recharts
 
 ### Run locally
 
@@ -71,79 +69,52 @@ Ask Cush uses xAI when `XAI_API_KEY` is set in the environment. Without it, the 
 
 Demo passcode: `2580`.
 
----
-
-## Key capabilities
+## Key design capabilities
 
 | Capability | Description |
 |------------|-------------|
-| **Instant Settlement** | Target delivery in seconds via modern rails + PAPSS local-currency settlement |
-| **Transparent Pricing** | No hidden FX mark-ups; recipient amount shown before confirmation |
-| **Agentic AI** | Intelligent routing, fraud detection, compliance orchestration and customer experience |
-| **Immutable Ledger** | BLAKE3-based cryptographic ledger for auditability and regulatory confidence |
-| **Compliance-first** | Designed for KYC/AML, transaction monitoring, PSD2/DORA-aligned controls and Bank of Ghana / multi-jurisdiction licensing |
-| **Africa-first Coverage** | Live payouts across all 54 African countries |
-| **Low Operating Cost** | Platform engineered for ~$1 per customer per month opex at scale |
-
----
+| **Instant Settlement Design** | Target delivery in seconds via modern rails and PAPSS local currency settlement |
+| **Transparent Pricing** | No hidden FX markups; recipient amount shown before confirmation |
+| **Agentic AI** | Intelligent routing, fraud detection, compliance orchestration, and customer experience |
+| **Immutable Ledger** | BLAKE3 cryptographic ledger for auditability and supervisory review |
+| **Compliance by Design** | Architecture prepared for KYC, AML, transaction monitoring, PSD2 and DORA aligned controls, and multi jurisdiction licensing (prepared, not yet granted) |
+| **Pan African Roadmap** | Designed for diaspora corridors into African mobile wallets and bank accounts |
+| **Low Operating Cost** | Platform engineered for low unit operating cost at scale |
 
 ## Architecture highlights (Cush Core)
 
-- **Immutable Ledger Layer** – Cryptographically verifiable transaction history using BLAKE3
-- **Agentic AI Orchestration** – Autonomous agents for payment routing, risk scoring, reconciliation and customer support
-- **Multi-rail Connectivity** – Integration with traditional rails (SWIFT, Faster Payments, SEPA, FEDWIRE) and African systems (PAPSS, GHIPSS, local mobile money)
-- **Embedded Finance APIs** – BaaS-style interfaces for partners to embed payments and accounts
-- **Regulatory Sandbox Ready** – Architecture supports Bank of Ghana and other central-bank sandbox engagement
-- **Multi-entity Structure** – Designed for UK Ltd (FCA), Ghana Ltd (BoG PSP), US subsidiary and optional Mauritius holding for tax efficiency
-
----
+* **Immutable Ledger Layer:** Cryptographically verifiable transaction history using BLAKE3
+* **Agentic AI Orchestration:** Autonomous agents for payment routing, risk scoring, reconciliation, and customer support under institutional mandate
+* **Multi Rail Connectivity:** Designed for integration with traditional rails (SWIFT, Faster Payments, SEPA, Fedwire, CHAPS) and African systems (PAPSS, GhIPSS, local mobile money)
+* **Embedded Finance APIs:** Interfaces for partner institutions to run accounts, cards, loans, and payments in their own brand
+* **Supervisory Readiness:** Architecture prepared for PRA, MAS, Bank of Ghana, and peer sandbox programmes (preparation is a design claim, not a granted licence)
 
 ## Leadership
 
-**Matthew Ekow Folson** – Founder & CEO  
-25+ years technology leadership in banking, payments and fintech. Former Open-Source Consultant & PM (IDAM/Cyber) at HSBC (FOSS Board Chair), IT Portfolio Manager at Metro Bank (PSD2), Head of Release & PM at Orwell Group. Led the first non-bank PSP as Direct CHAPS member at the Bank of England.  
+**Matthew Ekow Folson**, Founder and Group CEO  
+25+ years technology leadership in banking, payments, and fintech. Led the first non bank PSP onboarded by the Bank of England as a Direct CHAPS member, chaired EFOSS at HSBC, served as IT Portfolio Manager at Metro Bank (PSD2), and Head of Release and PM at Orwell Group.  
 [LinkedIn](https://www.linkedin.com/in/matthew-folson-8632b51) · [GitHub](https://github.com/MEFolson)
 
-**Jose Luis Caldeira** – CTO  
-20+ years in banking technology, digital architecture, big data, stablecoins and distributed financial systems.  
+**Jose Luis Caldeira**, Chief Technology Officer  
+20+ years in banking technology, digital architecture, big data, stablecoins, and distributed financial systems.  
 [LinkedIn](https://www.linkedin.com/in/luiscaldeira/)
-
-Combined team experience exceeds 75 years in regulated payments and core systems.
-
----
-
-## Planned public assets
-
-- API reference documentation
-- Client SDKs (selected languages)
-- Architecture decision records (ADRs)
-- Compliance and security whitepapers (public summaries)
-- Sample integrations and sandbox tooling
-
----
 
 ## Links
 
-- **Website / Beta Waitlist**: [cushpayments.co.uk](https://cushpayments.co.uk)
-- **Investor Data Room** (authorised access): available on request
-- **Company**: Cush Payments
-- **Contact**: mfolson@cushpayments.com
-
----
+* **Cush Payments**: [cushpayments.com](https://cushpayments.com) and [cushpayments.co.uk](https://cushpayments.co.uk)
+* **Cush Core**: [cush-core.com](https://cush-core.com)
+* **Investor Data Room** (authorised access): available on request
+* **Contact**: mfolson@cushpayments.com
 
 ## License
 
 This project is licensed under the [GNU Affero General Public License v3.0](LICENSE).
 
----
+## Security and responsible disclosure
 
-## Security & responsible disclosure
-
-Security is foundational. Please report any suspected vulnerabilities privately to the founders. Public disclosure of zero-days is not requested or expected.
-
----
+Security is foundational. Please report any suspected vulnerabilities privately to the team at mfolson@cushpayments.com.
 
 <p align="center">
-  <em>Built for the African diaspora. Engineered for regulated scale.</em><br>
-  © 2025–2026 Cush Payments. All rights reserved.
+  <em>Built for the African diaspora.</em><br>
+  © 2025 to 2026 Cush Payments. All rights reserved.
 </p>
