@@ -246,7 +246,7 @@ export function PulseView() {
       <section className="px-5 pt-6 pb-8">
         <h2 className="font-display text-base font-semibold">All 54 markets</h2>
         <p className="mt-1 text-sm text-stone">
-          Licensed payouts to every African country — wallet or bank.
+          Target wallet and bank payout corridors across Africa (illustrative preview).
         </p>
         <input
           value={q}
